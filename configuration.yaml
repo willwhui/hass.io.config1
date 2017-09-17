@@ -1,0 +1,41 @@
+homeassistant:
+  name: HomePi
+  latitude: 22.239541
+  longitude: 113.574117
+  elevation: 5
+  unit_system: metric
+  time_zone: Asia/Shanghai
+  customize:
+    sensor.random_1:
+      friendly_name: Kitchen random kettle
+      icon: mdi:kettle
+introduction:
+
+frontend:
+
+http:
+  api_password: !secret http_password
+
+updater:
+
+discovery:
+
+# Allows you to issue voice commands from the frontend in enabled browsers
+conversation:
+
+history:
+
+logbook:
+
+sun:
+
+sensor:
+  - platform: random
+    name: random 1
+    minimum: -100
+    maximum: 100
+panel_iframe:
+  configurator:
+    title: Configurator
+    icon: mdi:wrench
+    url: http://hassio.local:3218
